@@ -7,7 +7,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%= link_to Rails.application.class.parent_name.downcase, static_pages_about_path, class: 'navbar-brand' %>
+      <%= link_to Rails.application.class.parent_name.downcase, root_path, class: 'navbar-brand' %>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -17,11 +17,7 @@
         <% if user_signed_in? %>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle profile-picture-a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-              <% if current_user.profile_picture %>
-                <%= image_tag current_user.profile_picture, class: 'img-circle' %>
-              <% else %>
-                <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-              <% end %>
+              <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
               <span class="caret"></span>
             </a>
             <ul class="dropdown-menu">
